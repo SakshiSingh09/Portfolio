@@ -14,7 +14,6 @@
             &__item{
                 width: 450px;
                 height: 366px;
-                cursor: pointer;
                 position: relative;
 
                 &__img-wrapper{
@@ -22,8 +21,8 @@
                     text-align: center;
                     padding: 10px;
                     border-radius: 4px;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                     margin: 0 20px;
+                    cursor: pointer;
 
                     img{
                         width: 100%;
@@ -41,6 +40,9 @@
                         text-transform: capitalize;
                         color: var(--yellow-theme-main-color);
                     }
+                }
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
             }
         }
