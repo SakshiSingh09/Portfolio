@@ -43,9 +43,9 @@ const Portfolio = () => {
       <div className='portfolio__content'>
         <div className='portfolio__content__cards'>
           {
-            portfolioData.map((item) => {
+            portfolioData.map((item, index) => {
               return(
-                <div className='portfolio__content__cards__item'>
+                <div className='portfolio__content__cards__item' key={index}>
                   <div className='portfolio__content__cards__item__img-wrapper'>
                     <a href={item.link} target='_blank'>
                       <img alt='dummy data' src={item.image}/>
