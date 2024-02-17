@@ -1,6 +1,6 @@
 import React from 'react'
 import PageHeaderContent from '../../components/pageHeaderContent'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { AiFillProfile } from "react-icons/ai";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { data } from '../../utils/resumeData'
 import 'react-vertical-timeline-component/style.min.css'
@@ -10,7 +10,7 @@ import { MdWork } from 'react-icons/md'
 const Resume = () => {
   return (
     <section id='resume' className='resume'>
-      <PageHeaderContent headerText="Resume" icon={ <BsInfoCircleFill size={40} />}/>
+      <PageHeaderContent headerText="Resume" icon={ <AiFillProfile size={40} />}/>
       <div className='timeline'>
         <div className='timeline__experience'>
           <h3 className='timeline__experience__header-text'>Experience</h3>

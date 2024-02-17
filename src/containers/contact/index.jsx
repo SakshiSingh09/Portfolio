@@ -1,13 +1,13 @@
 import React from 'react'
 import PageHeaderContent from '../../components/pageHeaderContent'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { BiSolidContact } from "react-icons/bi";
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
 
 const Contact = () => {
   return (
     <section id='contact' className='contact'>
-      <PageHeaderContent headerText="Contact Me" icon={ <BsInfoCircleFill size={40} />}/>
+      <PageHeaderContent headerText="Contact Me" icon={ <BiSolidContact size={40} />}/>
       <div className='contact__content'>
         <Animate
           play

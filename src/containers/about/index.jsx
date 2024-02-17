@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.scss'
 import PageHeaderContent from '../../components/pageHeaderContent';
-import { BsInfoCircleFill } from 'react-icons/bs'; 
+import { CgProfile } from "react-icons/cg";
 import personalDetails from '../../utils/personalDetails';
 import { Animate } from 'react-simple-animate';
 import {DiApple, DiAndroid} from 'react-icons/di';
@@ -10,7 +10,7 @@ import {FaDev, FaDatabase} from 'react-icons/fa'
 const About = () => {
   return (
     <section id='about' className='about'>
-      <PageHeaderContent headerText="About Me" icon={ <BsInfoCircleFill size={40} />}/>
+      <PageHeaderContent headerText="About Me" icon={ <CgProfile size={40} />}/>
 
       <div className='about__content'>
         <div className='about__content__personalWrapper'>

@@ -25,10 +25,10 @@
                     cursor: pointer;
 
                     img{
-                        width: 100%;
+                        // width: 485px;
                         height: 300px;
-                        object-fit: cover;
-                        //width: 100%;
+                        object-fit: fill;
+                        width: 100%;
                     }
 
                     h3{

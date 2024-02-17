@@ -1,23 +1,24 @@
 import React from 'react'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { CgWebsite } from "react-icons/cg";
 import PageHeaderContent from '../../components/pageHeaderContent'
 import CaraImg from '../../assets/images/Cara_Img.png';
 import NewsAppImg from '../../assets/images/News_Img.png';
 import YtubeCloneImg from '../../assets/images/Youtube_Clone_Img.png';
 import CryptoImg from '../../assets/images/Crypto_Img.png';
+import ApplicationImg from '../../assets/images/Application_Img.png';
 import './styles.scss'
 
 const portfolioData = [
-  {
-    name : "Cara Ecommerce",
-    image : CaraImg,
-    link : ""
-  },
-  {
-    name : "News App",
-    image : NewsAppImg,
-    link : ""
-  },
+  // {
+  //   name : "Cara Ecommerce",
+  //   image : CaraImg,
+  //   link : ""
+  // },
+  // {
+  //   name : "News App",
+  //   image : NewsAppImg,
+  //   link : ""
+  // },
   {
     name : "Youtube Clone",
     image : YtubeCloneImg,
@@ -30,7 +31,7 @@ const portfolioData = [
   },
   {
     name : "Application HomePage",
-    image : CryptoImg,
+    image : ApplicationImg,
     link : "https://main--superb-cheesecake-8f819b.netlify.app/"
   }
 ]
@@ -39,7 +40,7 @@ const Portfolio = () => {
   
   return (
     <section id='portfolio' className='portfolio'>
-      <PageHeaderContent headerText="Portfolio" icon={ <BsInfoCircleFill size={40} />}/>
+      <PageHeaderContent headerText="Portfolio" icon={ <CgWebsite size={40} />}/>
       <div className='portfolio__content'>
         <div className='portfolio__content__cards'>
           {
@@ -47,7 +48,7 @@ const Portfolio = () => {
               return(
                 <div className='portfolio__content__cards__item' key={index}>
                   <div className='portfolio__content__cards__item__img-wrapper'>
-                    <a href={item.link} target='_blank'>
+                    <a href={item.link} target='_blank' rel="noreferrer noopener">
                       <img alt='dummy data' src={item.image}/>
                     </a>
                     <h3>{item.name}</h3>
