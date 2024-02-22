@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { CgWebsite } from "react-icons/cg";
 import PageHeaderContent from '../../components/pageHeaderContent'
-import CaraImg from '../../assets/images/Cara_Img.png';
-import NewsAppImg from '../../assets/images/News_Img.png';
+// import CaraImg from '../../assets/images/Cara_Img.png';
+// import NewsAppImg from '../../assets/images/News_Img.png';
 import YtubeCloneImg from '../../assets/images/Youtube_Clone_Img.png';
 import CryptoImg from '../../assets/images/Crypto_Img.png';
 import ApplicationImg from '../../assets/images/Application_Img.png';
