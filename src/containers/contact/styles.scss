@@ -58,7 +58,17 @@
 
                         &:focus{
                             outline: none;
+                            background-color: transparent;
+                            color: var(--yellow-theme-sub-text-color);
                         }
+
+                        &:active{
+                            outline: none;
+                            background-color: transparent;
+                            color: var(--yellow-theme-sub-text-color);
+                        }
+
+                        
                     }
 
                     .nameLabel,
@@ -76,12 +86,13 @@
                     .inputName:focus + .nameLabel,
                     .inputName:valid + .nameLabel,
                     .inputEmail:focus + .emailLabel,
-                    .inputEmail:valid + .emailabel,
+                    .inputEmail:valid + .emailLabel,
                     .inputDescription:focus + .descriptionLabel,
                     .inputDescription:valid + .descriptionLabel{
                         font-size: 17px;
                         left: 0;
                         top: -20px;
+                        background-color: transparent;
                     }
                 }
             }
