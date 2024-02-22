@@ -18,8 +18,10 @@
 
 @media only screen and (max-width : 768px){
     .alert{
+        top: 0;
+        
         p{
-            width: 200px;
+            width: auto;
             font-size: 12px;
             padding: 5px 10px;
         }

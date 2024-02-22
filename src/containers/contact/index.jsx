@@ -28,7 +28,7 @@ const Contact = () => {
 
   const validateForm = () => {
     const regex = /^[A-Za-z]+$/;
-    if(emailValidator.validate(formData.from_email) && formData.from_description.length > 2 && regex.test(formData.from_name)){
+    if(emailValidator.validate(formData.from_email) && formData.from_description.length >= 2 && regex.test(formData.from_name)){
       return 1;
     }
     
