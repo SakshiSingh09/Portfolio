@@ -1,16 +1,18 @@
 import React from 'react'
 import PageHeaderContent from '../../components/pageHeaderContent'
-import { AiFillProfile } from "react-icons/ai";
+import { IoMdDownload } from "react-icons/io";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { data } from '../../utils/resumeData'
 import 'react-vertical-timeline-component/style.min.css'
 import './styles.scss'
 import { MdWork } from 'react-icons/md'
+import SakshiSingh_Resume from '../../utils/SakshiSingh_Resume.pdf';
 
 const Resume = () => {
   return (
     <section id='resume' className='resume'>
-      <PageHeaderContent headerText="Resume" icon={ <AiFillProfile size={40} />}/>
+      <PageHeaderContent headerText="Resume" icon={ <a href={SakshiSingh_Resume} target='_blank' download='SakshiSingh_Resume' rel="noreferrer">
+        <IoMdDownload size={40} style={{cursor: 'pointer'}}/></a>}/>
       <div className='timeline'>
         <div className='timeline__experience'>
           <h3 className='timeline__experience__header-text'>Experience</h3>

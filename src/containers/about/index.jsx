@@ -44,11 +44,12 @@ const About = () => {
           <ul>
             {
               (personalDetails.details).map((detail,i) => {
-                {console.log(detail)}
                 return(
                   <li key={i}>
                     <span className='title'>{detail.label}:</span>
-                    <span className='value'> {detail.value}</span>
+                    {
+                      detail.url ? <a className='tag' href={detail.url} target='_blank' rel="noreferrer">{detail.value}</a> : <span className='value'> {detail.value}</span> 
+                    }
                 </li>
                 )
               })

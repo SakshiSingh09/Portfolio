@@ -5,12 +5,10 @@ import { Animate } from 'react-simple-animate'
 import './styles.scss'
 import emailjs from 'emailjs-com';
 import emailValidator from 'email-validator';
-import { useNavigate } from 'react-router-dom';
 import Alert from '../alert/index';
 
 const Contact = () => {
 
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     from_name: '',
     from_email: '',
@@ -27,8 +25,7 @@ const Contact = () => {
   };
 
   const validateForm = () => {
-    const regex = /^[A-Za-z]+( [A-Za-z]+)$/;
-    if(emailValidator.validate(formData.from_email) && formData.from_description.length >= 2 && regex.test(formData.from_name)){
+    if(emailValidator.validate(formData.from_email)){
       return 1;
     }
     
@@ -37,6 +34,7 @@ const Contact = () => {
   }
 
   const handleSubmit = (e) => {
+    console.log(formData);
     e.preventDefault();
     if(validateForm()){
       emailjs.send('service_meud6km', 'template_eofnfhb', formData, 'baB3AEBt9JcqxlLTO')
@@ -49,32 +47,35 @@ const Contact = () => {
         setAlert(true);
         setTimeout(() => {
           setAlert(false);
-          navigate('/');
-        },2000)
+          setFormData({
+            from_name: '',
+            from_email: '',
+            from_description: ''
+          }) 
+        },4000) 
       }, (error) => {
         console.log(error.text);
         setAlertMsg({
           message: 'Sorry! Cannot send the connect request. :(',
           warning: true
         })
-          
       });
     }else{
       setAlert(true);
       setTimeout(() => {
         setAlert(false);
-        navigate('/');
-      },2000)
+        setFormData({
+          from_name: '',
+          from_email: '',
+          from_description: ''
+        })
+      },4000)
       setAlertMsg({
-        message: 'Wrong data passed. Please recheck the data',
+        message: 'Wrong email entered. Please recheck your email',
         warning: true
       })
+      
     }
-    setFormData({
-      from_name: '',
-      from_email: '',
-      from_description: ''
-    })
 
   }
   return (
@@ -116,11 +117,11 @@ const Contact = () => {
                 <label htmlFor='from_name' className='nameLabel'>Name</label>
               </div>
               <div className='emailWrapper'>
-                <input className='inputEmail' name='from_email' type={'text'} onChange={handleChange} required/>
+                <input className='inputEmail' name='from_email' type={'email'} onChange={handleChange} required/>
                 <label htmlFor='from_email' className='emailLabel'>E-Mail</label>
               </div>
               <div className='descriptionWrapper'>
-                <textarea rows="5" className='inputDescription' name='from_description' type={'text'} onChange={handleChange} required/>
+                <input style={{height: '200px'}} className='inputDescription' name='from_description' type={'text'} onChange={handleChange} required/>
                 <label htmlFor='from_description' className='descriptionLabel'>Description</label>
               </div>
             </div>

@@ -32,11 +32,9 @@
                 margin-bottom: 15px;
             }
 
-            span.title, span.value{
+            span.title, span.value, a{
                font-size: 18px;
-               font-weight: 700;
                letter-spacing: 0.5px;
-               border-bottom: 2px solid var(--yellow-theme-main-color);
                position: relative;
                margin-right: 16px;
                padding-bottom: 5px;
@@ -45,6 +43,11 @@
 
             span.value{
                 border: none;
+            }
+
+            a{
+                text-decoration: underline;
+
             }
         }
 

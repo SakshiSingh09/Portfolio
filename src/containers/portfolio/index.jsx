@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CgWebsite } from "react-icons/cg";
 import PageHeaderContent from '../../components/pageHeaderContent'
 import CaraImg from '../../assets/images/Cara_Img.png';
@@ -37,6 +37,8 @@ const portfolioData = [
 ]
 
 const Portfolio = () => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
   
   return (
     <section id='portfolio' className='portfolio'>
@@ -49,9 +51,11 @@ const Portfolio = () => {
                 <div className='portfolio__content__cards__item' key={index}>
                   <div className='portfolio__content__cards__item__img-wrapper'>
                     <a href={item.link} target='_blank' rel="noreferrer noopener">
-                      <img alt='dummy data' src={item.image}/>
+                      <img alt='dummy data' src={item.image} onLoad={() => setIsLoaded(true)}/>
                     </a>
-                    <h3>{item.name}</h3>
+                    {
+                      isLoaded && <h3>{item.name}</h3>
+                    }
                   </div> 
                 </div>
               )

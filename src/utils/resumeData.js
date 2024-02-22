@@ -3,7 +3,7 @@ export const data = {
         {
             title: 'Software Engineer,',
             subtitle : 'Ford Motors',
-            description: 'Web Development - React.js, Optimization',
+            description: 'Web Development',
             date: '2021 - Present'
         },
         {
@@ -15,22 +15,22 @@ export const data = {
     ],
     education: [
         {
-            title: 'Graduation - B-Tech,',
+            title: 'Under Graduate - B.Tech,',
             subtitle : 'SRM Institute Of Science and Technology, Chennai',
-            description: 'B-Tech in ECE, Graduated with 8.98 GPA',
-            date: '2017 - 2021'
+            description: 'B.Tech in ECE - 8.98 GPA',
+            date: '2021'
         },
         {
             title : 'Higher Secondary,',
             subtitle: 'Shri Chaitanya, Hyderabad',
-            description: '12th Class and passed with 95.2%',
-            date: '2015 - 2017'
+            description: '12th Class - 95.2%',
+            date: '2017'
         },
         {
             title: 'Secondary,',
             subtitle: 'Vasavadatta Vidya Vihar, Sedam',
-            description: '10th Class and passed with 10CGPA',
-            date: 'Till 2015'
+            description: '10th Class - 10 CGPA',
+            date: '2015'
         }
     ]
 }
