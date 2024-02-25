@@ -11,16 +11,16 @@ export const skillData = [
                 percentage : '80'
             },
             {
+                skillname : 'Redux',
+                percentage : '50'
+            },
+            {
                 skillname : 'HTML',
                 percentage : '90'
             },
             {
                 skillname : 'CSS',
                 percentage : '90'
-            },
-            {
-                skillname : 'Redux',
-                percentage : '50'
             }
         ]
     },
